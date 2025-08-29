@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Text -->
+    <label for="">Name:</label>
+    <input type="text" placeholder="Enter your name" required />
+
+    <!-- Password -->
+    <label for="">Password:</label>
+    <input type="password" placeholder="Enter your name" required />
+
+    <!-- Ratio -->
+    <p>Choose your gender:</p>
+    <input type="radio" name="gender" value="male" />
+    <label for="male">Male</label>
+
+    <input type="radio" name="gender" value="female" />
+    <label for="male">Female</label>
+
+    <input type="radio" name="gender" value="female" />
+    <label for="male">Prefer not saying</label>
+
+    <!-- Section -->
+    <p>Select your hobbies:</p>
+    <select name="" id="">
+      <option value="">Choose</option>
+      <option value="">Watch Movie</option>
+      <option value="">Read Book</option>
+      <option value="">Music</option>
+      <option value="">Play game</option>
+    </select>
+
+    <p>Select your favorite languages:</p>
+    <input type="checkbox" name="hobby" value="reading" />
+    <label for="reading">C++</label>
+
+    <input type="checkbox" name="hobby" value="gaming" />
+    <label for="gaming">C#</label>
+
+    <input type="checkbox" name="hobby" value="sports" />
+    <label for="sports">JavaScript</label>
+
+    <br />
+
+    <!-- Browse -->
+    <label for="browser">Choose a browser:</label>
+    <input list="browsers" id="browser" name="browser" />
+    <datalist id="browsers">
+      <option value="Chrome">Hello</option>
+      <option value="Firefox"></option>
+      <option value="Edge"></option>
+      <option value="Safari"></option>
+    </datalist>
+
+    <br />
+    <br />
+    <!-- Table -->
+    <table border="2">
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Gender</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John</td>
+          <td>James</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Marry</td>
+          <td>Jane</td>
+          <td>Female</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Marry</td>
+          <td>Jane</td>
+          <td>Female</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+
+    <!-- Merge Table -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th rowspan="2">Student</th>
+          <th colspan="2">Math</th>
+          <th colspan="2">Science</th>
+        </tr>
+        <tr>
+          <th>Midterm</th>
+          <th>Final</th>
+          <th>Midterm</th>
+          <th>Final</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>85</td>
+          <td>90</td>
+          <td>88</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <td>Emma</td>
+          <td>78</td>
+          <td>84</td>
+          <td>91</td>
+          <td>89</td>
+        </tr>
+        <tr>
+          <td>Michael</td>
+          <td>92</td>
+          <td>95</td>
+          <td>85</td>
+          <td>87</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

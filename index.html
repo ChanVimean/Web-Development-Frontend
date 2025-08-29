@@ -4,45 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
+  <style>
+    .text {
+      color: orange;
+      background-color: darkblue;
+    }
+
+    #pizza {
+      color: green;
+      background-color: lightblue;
+    }
+
+    p {
+      color: red;
+      background-color: yellow;
+    }
+  </style>
   <body>
-    <!-- Text -->
-    <label for="">Name:</label>
-    <input type="text" placeholder="Enter your name" required />
+    <!-- Inline -->
+    <h1 style="color: #4e63d9e2">I am Blue</h1>
 
-    <!-- Password -->
-    <label for="">Password:</label>
-    <input type="password" placeholder="Enter your name" required />
+    <!-- Internal -->
+    <!-- class -->
+    <h1 class="text">I am Internal CSS</h1>
+    <h1 class="text">I am Internal CSS</h1>
+    <!-- id -->
+    <h2 id="pizza">I like pizza</h2>
+    <!-- tag -->
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+      architecto.
+    </p>
+    <p>Hi</p>
 
-    <!-- Ratio -->
-    <p>Choose your gender:</p>
-    <input type="radio" name="gender" value="male" />
-    <label for="male">Male</label>
-
-    <input type="radio" name="gender" value="female" />
-    <label for="male">Female</label>
-
-    <input type="radio" name="gender" value="female" />
-    <label for="male">Prefer not saying</label>
-
-    <!-- Section -->
-    <p>Select your hobbies:</p>
-    <select name="" id="">
-      <option value="">Choose</option>
-      <option value="">Watch Movie</option>
-      <option value="">Read Book</option>
-      <option value="">Music</option>
-      <option value="">Play game</option>
-    </select>
-
-      <p>Select your favorite languages:</p>
-      <input type="checkbox" name="hobby" value="reading" />
-      <label for="reading">C++</label>
-  
-      <input type="checkbox" name="hobby" value="gaming" />
-      <label for="gaming">C#</label>
-  
-      <input type="checkbox" name="hobby" value="sports" />
-      <label for="sports">JavaScript</label>
+    <!-- External -->
+    <h3 class="text2">External CSS using class</h3>
+    <h3 id="id2">External CSS using id</h3>
+    <h5>External CSS using HTML tag</h5>
   </body>
 </html>
