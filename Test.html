@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /***********************************************************************/
+    /* Simple Discount Tag */
+    .product-card {
+      position: relative;
+      width: 250px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .discount {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: red;
+      color: #fff;
+      padding: 5px 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .product-name {
+      margin: 15px 0 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .product-price {
+      color: #555;
+      font-size: 16px;
+    }
+
+    /***********************************************************************/
+    /* Banner */
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 300px; /* fixed height */
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* make image cover the banner */
+    }
+
+    .banner-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 12px 25px; /* padding: Vertical Horizontal */
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .banner-button:hover {
+      background-color: #e65c00;
+    }
+
+    /***********************************************************************/
+    /* Dropdown */
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown button {
+      background-color: #ff6600;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none; /* hide by default */
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-top: 5px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /***********************************************************************/
+    /* Icons */
+
+    .icons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 32px;
+      color: blue;
+    }
+  </style>
+  <body>
+    <!-- Simple Discount Tag -->
+    <div class="product-card">
+      <div class="discount">20% OFF</div>
+      <img
+        src="https://cdn.thewirecutter.com/wp-content/media/2024/11/cheapgaminglaptops-2048px-7981.jpg"
+        alt="Product Image"
+      />
+      <div class="product-name">Sample Product</div>
+      <div class="product-price">$49.99</div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+      <img
+        src="https://www.exascaleproject.org/wp-content/uploads/2019/11/news-banner-ecp-aspect-ratio-1920x600.jpg"
+        alt="BannerBanner"
+      />
+      <button class="banner-button">View Deal</button>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="dropdown">
+      <button>Choose Option</button>
+      <div class="dropdown-content">
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+        <a href="#">Option 3</a>
+        <a href="#">Option 4</a>
+      </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="icons-container">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-telegram"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-discord"></i>
+    </div>
+  </body>
+</html>
