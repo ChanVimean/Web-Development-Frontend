@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+  </head>
+  <style>
+    .container {
+      display: grid;
+      grid-template-rows: 1fr 2fr 1fr;
+      /* background-color: red; */
+      height: 100vh;
+      gap: 10px;
+      font-size: 1.5em;
+    }
+
+    .top-row {
+      background-color: blue;
+      padding: 10px;
+      color: white;
+    }
+
+    .middle-row {
+      /* background-color: Green; */
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+    }
+
+    .middle-row .left {
+      background-color: hsl(120, 80%, 62%);
+      padding: 10px;
+    }
+
+    .middle-row .right {
+      /* background-color: hsl(41, 100%, 50%); */
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .middle-row .right .main-content {
+      background-color: skyblue;
+      padding: 10px;
+    }
+
+    .middle-row .right .side-content {
+      /* background-color: #d8712c; */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .middle-row .right .box {
+      background-color: hotpink;
+      padding: 10px;
+      color: white;
+    }
+
+    .bottom-row {
+      background-color: gray;
+      padding: 10px;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <section class="container">
+      <div class="top-row">Header with Logo & nav</div>
+
+      <div class="middle-row">
+        <div class="left">Sidebar Navigation</div>
+
+        <div class="right">
+          <div class="main-content">Main Content Area</div>
+          <div class="side-content">
+            <div class="box">Related Content</div>
+            <div class="box">Call to action</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-row">Footer Content</div>
+    </section>
+  </body>
+</html>
