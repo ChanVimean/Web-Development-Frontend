@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM</title>
+  </head>
+  <style>
+    #btn {
+      background-color: red;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 10px;
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <!-- 1. ID selector -->
+    <h1 id="greeting">Good morning John</h1>
+
+    <button id="btn" onclick="changeColor()">Red</button>
+
+    <script>
+      // 1. ID selector
+      const greeting = document.getElementById("greeting");
+      greeting.textContent = "Good evening James!!!";
+      greeting.style.color = "blue";
+      greeting.style.fontSize = "4em";
+      greeting.style.backgroundColor = "pink";
+      greeting.style.padding = "20px";
+      greeting.style.borderRadius = "10px";
+
+      // Toggle Change Color
+      const btn = document.getElementById("btn");
+      function changeColor() {
+        if (btn.style.backgroundColor === "blue") {
+          btn.style.backgroundColor = "red";
+          btn.textContent = "Red";
+        } else {
+          btn.style.backgroundColor = "blue";
+          btn.textContent = "Blue";
+        }
+      }
+    </script>
+  </body>
+</html>
