@@ -5,21 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
   </head>
-  <style></style>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      display: inline-block;
+      background-color: aqua;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    input {
+      width: 40%;
+      margin: 5px;
+      padding: 10px;
+      font-size: 2em;
+    }
+
+    button {
+      background-color: yellow;
+      padding: 10px 20px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 2px 1px 5px gray;
+      font-weight: bold;
+      margin-right: 20px;
+      cursor: pointer;
+      transition: 0.15s ease-in-out;
+    }
+
+    button:hover {
+      background-color: rgb(202, 202, 47);
+    }
+
+    button:active {
+      background-color: rgb(226, 226, 195);
+    }
+
+    label {
+      margin-top: 20px;
+      font-size: 2em;
+      font-weight: bold;
+    }
+  </style>
   <body>
     <div class="container">
+      <h1>Calculator</h1>
+
       <input id="num1" type="number" />
       <input id="num2" type="number" />
+      <label> = </label>
+      <label id="result"></label>
       <br />
+      <br />
+
       <button onclick="Calculator('+')">+</button>
       <button onclick="Calculator('-')">-</button>
       <button onclick="Calculator('*')">*</button>
       <button onclick="Calculator('/')">/</button>
-      <button onclick="">C</button>
-
-      <p id="result"></p>
+      <button onclick="Clear()">C</button>
     </div>
-
     <script>
       function Calculator(operator) {
         const num1 = parseFloat(document.getElementById("num1").value);
@@ -55,6 +104,12 @@
       textContext = ""
     }
     */
+
+      function Clear() {
+        document.getElementById("num1").value = "";
+        document.getElementById("num2").value = "";
+        document.getElementById("result").textContent = "";
+      }
     </script>
   </body>
 </html>
