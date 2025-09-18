@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator with eval()</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #caf0f8;
+    }
+
+    .container {
+      background-color: #0077b6;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px black;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 2em;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ffe6a7;
+      border: none;
+      border-radius: 5px;
+      margin-top: 50px;
+      font-size: 1.5em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.1s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #ffb700;
+    }
+
+    button:active {
+      background-color: #e2dccd;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 2em;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Calculator</h1>
+
+      <input type="text" id="expression" placeholder="Enter expression" />
+      <label> = </label>
+      <label id="result"></label>
+      <br />
+      <button id="calc" onclick="Calculate()">Calculate</button>
+      <button id="clear" onclick="Clear()">C</button>
+    </div>
+
+    <script>
+      function Calculate() {
+        const expression = document.getElementById("expression").value;
+        let result;
+
+        // Error handling
+        try {
+          // Logic...
+          result = eval(expression);
+        } catch (error) {
+          result = "Invalid...";
+        }
+
+        document.getElementById("result").textContent = result;
+      }
+
+      function Clear() {
+        document.getElementById("expression").value = "";
+        document.getElementById("result").textContent = "";
+      }
+    </script>
+  </body>
+</html>
