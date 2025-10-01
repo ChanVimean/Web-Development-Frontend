@@ -1,118 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Array Object</title>
-  </head>
-  <style>
-    .laptopList {
-      display: flex;
-      gap: 40px;
-    }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
 
-    .laptop {
-      list-style: none;
-      background: linear-gradient(to bottom, #f8f9fa, #d7dee5);
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .laptop article {
-      padding: 10px;
-    }
-
-    .laptop h2 {
-      color: blue;
-      font-size: 2.5em;
-    }
-
-    .laptop img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      background-color: white;
-    }
-  </style>
-  <body>
-    <h1>List of laptops</h1>
-    <ul id="laptops" class="laptopList"></ul>
-
-    <!-- <ul>
-      <li>
-        <img src="" alt="">
-        <h2>Title Car</h2>
-        <p>Color</p>
-        <p>$</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <button>Add to Cart</button>
-      </li>
-    </ul> -->
-
-    <script>
-      const laptops = document.getElementById("laptops");
-
-      // Array of objects
-      const laptopsList = [
-        {
-          brand: "MSI",
-          price: 1299.99,
-          color: "black",
-          weight: 2.5,
-          image:
-            "https://www.pcworld.com/wp-content/uploads/2025/04/20220324_103646-1.jpg?quality=50&strip=all",
-        },
-        {
-          brand: "Dell",
-          price: 999.49,
-          color: "silver",
-          weight: 2.3,
-          image:
-            "https://www.dell.com/wp-uploads/2025/01/Dell-Pro-14-Premium.png",
-        },
-        {
-          brand: "HP",
-          price: 899.0,
-          color: "gray",
-          weight: 2.1,
-          image:
-            "https://laptopfactory.com.ph/wp-content/uploads/2025/04/492928598_663527049625253_9185531003181813895_n.webp",
-        },
-        {
-          brand: "Apple",
-          price: 1999.99,
-          color: "white",
-          weight: 1.8,
-          image: "https://cdn.mos.cms.futurecdn.net/92ZuMSEXx6JQM4YxGSrvuK.jpg",
-        },
-        {
-          brand: "Lenovo",
-          price: 799.99,
-          color: "black",
-          weight: 2.2,
-          image:
-            "https://news.lenovo.com/wp-content/uploads/2022/12/16_Ideapad_Pro_5i_Hero_Family-e1671470792489.jpg",
-        },
-      ];
-
-      // Extract data using map()
-      laptops.innerHTML = laptopsList
-        .map((laptop, index) => {
-          return `
-            <li class="laptop" key="${index}">
-              <img src="${laptop.image}" alt="Laptop Image" />
-
-              <article>
-                <h2>Laptop: ${laptop.brand}</h2>
-                <p>${laptop.color}</p>
-                <p>$${laptop.price}</p>
-                <p>${laptop.weight}kg</p>
-              </article>
-            </li>
-          `;
-        })
-        .join("");
-    </script>
-  </body>
+  <script src="index.js"></script>
+</body>
 </html>
