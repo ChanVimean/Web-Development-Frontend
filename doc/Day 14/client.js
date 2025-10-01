@@ -1,5 +1,5 @@
 // ? Single import
-import phones from "./seller.js";
+import phones from "./seller.js"
 
 // ? Multiple import
 import { clothes, addition } from "./seller.js"
